@@ -131,7 +131,7 @@ p:last-child{margin-bottom:0}
 .valley-glow{opacity:0;animation:glowIn 1.8s ease 1.6s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes glowIn{to{opacity:1}}
-@keyframes drift{0%,100%{transform:translateY(58px)}50%{transform:translateY(66px)}}50%{transform:translateY(7px)}}
+@keyframes drift{0%,100%{transform:translateY(58px)}50%{transform:translateY(66px)}}
 
 /* ---------- section base ---------- */
 .section{padding-top:clamp(76px,10vw,124px);padding-bottom:clamp(76px,10vw,124px)}
@@ -184,22 +184,14 @@ p:last-child{margin-bottom:0}
 .contact .eyebrow{color:rgba(255,255,255,.42)}
 .contact h2{max-width:20ch;margin:0 auto}
 .contact p{color:rgba(255,255,255,.62);max-width:46ch;margin:22px auto 0;font-size:1.05rem}
-.mailto{
-  display:inline-block;margin-top:30px;
-  font-size:clamp(1.05rem,3vw,1.6rem);font-weight:500;letter-spacing:-.02em;
-  color:var(--auric-lit);text-decoration:none;
-  border-bottom:1px solid rgba(229,184,98,.38);padding-bottom:3px;
-  transition:border-color .25s ease;
-}
-.mailto:hover{border-bottom-color:var(--auric-lit)}
-.contact-cta{margin-top:38px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
 /* ---------- footer ---------- */
 .footer{padding:34px 0;font-size:13.5px;color:var(--ink-3)}
 .footer-in{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
 .footer a{text-decoration:none;color:var(--ink-2)}
 .footer a:hover{color:var(--ink)}
-.footer-mark{display:flex;align-items:center;gap:8px;color:var(--ink-2);font-weight:600;letter-spacing:-.02em}
+.footer-mark{display:flex;align-items:center;gap:9px;color:var(--ink-2);font-weight:600;letter-spacing:-.02em}
+.footer-mark svg{width:27px;height:18px;flex:none}
 
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.68,.24,1),transform .7s cubic-bezier(.22,.68,.24,1)}
@@ -254,7 +246,7 @@ p:last-child{margin-bottom:0}
       <a href="#build">What we build</a>
       <a href="#about">About</a>
       <a href="#how">How we work</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Company</a>
     </nav>
   </div>
 </header>
@@ -269,7 +261,7 @@ p:last-child{margin-bottom:0}
       <p class="lead">Auric Wave Valley builds consumer software — a family of small, focused apps you open without thinking, use for ninety seconds, and close knowing the thing is handled.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#build">See what we build</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="#contact">Who we are</a>
       </div>
       <p class="hero-note">First release in development</p>
     </div>
@@ -370,14 +362,9 @@ p:last-child{margin-bottom:0}
   <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="wrap">
-      <p class="eyebrow">Contact</p>
-      <h2>Tell us what's getting in your way.</h2>
-      <p>Partnerships, press, early access, or an idea for an app you wish existed — we read everything that comes in.</p>
-      <a class="mailto" href="mailto:hello@auricwavevalley.com">hello@auricwavevalley.com</a>
-      <div class="contact-cta">
-        <a class="btn btn-light" href="mailto:hello@auricwavevalley.com?subject=Early%20access">Ask for early access</a>
-        <a class="btn btn-outline" href="#build">Back to what we build</a>
-      </div>
+      <p class="eyebrow">The company</p>
+      <h2>Who we are.</h2>
+      <p>Auric Wave Valley is the software development arm of N2 Digital, an Australian registered company. Partnership, press and early-access enquiries are welcome — our contact address goes live alongside our first release.</p>
     </div>
   </section>
 
@@ -396,7 +383,7 @@ p:last-child{margin-bottom:0}
         Auric Wave Valley
       </span>
       <span>&copy; <span id="yr">2026</span> Auric Wave Valley. All rights reserved.</span>
-      <a href="mailto:hello@auricwavevalley.com">hello@auricwavevalley.com</a>
+      <span>Part of N2 Digital Pty Ltd &middot; ABN 61 700 972 425</span>
     </div>
   </footer>
 

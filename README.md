@@ -78,7 +78,8 @@ Open `index.html` on GitHub and click the pencil icon. Commit, and the change is
 
 Things you'll probably want to change:
 
-- **Email address** — `hello@auricwavevalley.com` appears five times in `index.html` and once in `404.html`. You'll need to set this mailbox up with an email provider before it works (Cloudflare Email Routing can forward it to a personal inbox for free).
+- **Contact details** — the site currently carries no email address or form, so there is no way for a visitor to reach you. When you have a mailbox ready, add it to the contact section as `<a class="entity-name" href="mailto:YOUR@ADDRESS">YOUR@ADDRESS</a>`. Cloudflare Email Routing will forward an address at your domain to a personal inbox for free.
+- **Company details** — the registered entity and ABN appear in the contact section and the footer. Update both if they change.
 - **The three cards** under "What we build" — swap the placeholder categories for your real app names once they're ready, and change the "In development" chips.
 - **Colours** — every colour is defined once at the top of the `<style>` block under `:root`. `--auric` is the gold accent.
 - **Logo** — the header and footer draw the mark as inline SVG, so it stays sharp at any size and needs no image request. To adjust it, edit the three `<path d="M1 19 …">` lines. `logo-mark.svg` is the same artwork as a standalone file.
