@@ -1,0 +1,85 @@
+# auricwavevalley.com
+
+Static website for Auric Wave Valley, hosted free on GitHub Pages with DNS at Cloudflare.
+
+## Files
+
+| File | What it's for |
+|---|---|
+| `index.html` | The whole website — HTML, CSS and JS in one file. Edit this to change content. |
+| `404.html` | Shown when someone hits a URL that doesn't exist. |
+| `favicon.svg` | Browser tab icon. |
+| `CNAME` | Tells GitHub Pages the site lives at `auricwavevalley.com`. Do not delete. |
+| `robots.txt`, `sitemap.xml` | Search engine basics. |
+| `.nojekyll` | Tells GitHub to serve the files as-is. |
+
+---
+
+## Part 1 — Put the site on GitHub
+
+1. Sign in to GitHub and create a new **public** repository. Name it `auricwavevalley.com` (any name works).
+2. On the repo page choose **Add file → Upload files**, drag in every file from this folder, and click **Commit changes**.
+   - If `.nojekyll` won't upload from your file browser, use **Add file → Create new file**, type `.nojekyll` as the name, leave it empty, and commit.
+3. Go to **Settings → Pages**.
+4. Under **Build and deployment**, set Source to **Deploy from a branch**, branch **main**, folder **/ (root)**. Save.
+5. Wait about a minute, then check the temporary address GitHub shows you (`https://YOUR-USERNAME.github.io/auricwavevalley.com/`). The site should load.
+6. Still in **Settings → Pages**, under **Custom domain**, enter `auricwavevalley.com` and click **Save**.
+
+GitHub will now say the DNS check is in progress. That's expected — do Part 2 next.
+
+---
+
+## Part 2 — Point the domain at GitHub in Cloudflare
+
+Open your domain in Cloudflare and go to **DNS → Records**. Delete any existing `A`, `AAAA` or `CNAME` record on the root (`@`) or on `www` first, then add these:
+
+**Four A records for the root domain** — Type `A`, Name `@`:
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+**Four AAAA records for IPv6** (optional but recommended) — Type `AAAA`, Name `@`:
+
+```
+2606:50c0:8000::153
+2606:50c0:8001::153
+2606:50c0:8002::153
+2606:50c0:8003::153
+```
+
+**One CNAME for www** — Type `CNAME`, Name `www`, Target `YOUR-USERNAME.github.io`
+
+### Important Cloudflare settings
+
+- **Set the proxy status to "DNS only" (grey cloud) on all of the records above.** GitHub needs to see the real DNS to issue your HTTPS certificate. If the orange cloud is on, the certificate never gets issued.
+- Go to **SSL/TLS → Overview** and set the encryption mode to **Full** (or **Full (strict)**). If it's on **Flexible**, the site will get stuck in a redirect loop.
+- Once the site is live and HTTPS works, you can switch the proxy back on (orange cloud) if you want Cloudflare's caching. Keep SSL mode on Full if you do.
+
+---
+
+## Part 3 — Turn on HTTPS
+
+DNS changes usually take 10–30 minutes (occasionally up to 24 hours). Once **Settings → Pages** shows the domain as verified, tick **Enforce HTTPS**. If the checkbox is greyed out, wait a bit longer, or remove and re-add the custom domain to force GitHub to re-issue the certificate.
+
+`https://auricwavevalley.com` is now live.
+
+---
+
+## Editing the site later
+
+Open `index.html` on GitHub and click the pencil icon. Commit, and the change is live in about a minute.
+
+Things you'll probably want to change:
+
+- **Email address** — `hello@auricwavevalley.com` appears five times in `index.html` and once in `404.html`. You'll need to set this mailbox up with an email provider before it works (Cloudflare Email Routing can forward it to a personal inbox for free).
+- **The three cards** under "What we build" — swap the placeholder categories for your real app names once they're ready, and change the "In development" chips.
+- **Colours** — every colour is defined once at the top of the `<style>` block under `:root`. `--auric` is the gold accent.
+- **Social preview image** — add a 1200×630 image named `og.png` to the repo, then add `<meta property="og:image" content="https://auricwavevalley.com/og.png">` inside `<head>`.
+
+## Previewing on your own computer
+
+Just double-click `index.html` — it opens straight in a browser, no build step or server needed.
