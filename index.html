@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://auricwavevalley.com/">
 <meta property="og:title" content="Auric Wave Valley — Software development studio">
 <meta property="og:description" content="We build a family of small, focused consumer apps that handle the everyday things properly.">
+<meta property="og:image" content="https://auricwavevalley.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,8 +28,9 @@
   --base:#f6f7f9;
   --surface:#ffffff;
   --line:#e3e7ec;
-  --auric:#b7822a;
-  --auric-lit:#e0b25c;
+  --auric:#d19a2e;
+  --auric-deep:#8f6512;
+  --auric-lit:#e5b862;
   --deep:#161b23;
   --sans:"Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -81,7 +83,7 @@ p:last-child{margin-bottom:0}
 .nav.scrolled{border-bottom-color:var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:58px}
 .mark{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;letter-spacing:-.02em;font-size:15px}
-.mark svg{width:20px;height:11px;overflow:visible}
+.mark svg{width:31px;height:21px;flex:none}
 .nav-links{display:flex;gap:30px;align-items:center}
 .nav-links a{
   text-decoration:none;font-size:14px;color:var(--ink-2);
@@ -115,23 +117,21 @@ p:last-child{margin-bottom:0}
 .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
 .hero-note{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-top:26px}
 
-/* signature: the valley waveform */
-.valley{position:relative;margin-top:-14px;pointer-events:none}
+/* signature: the brand waves, scaled up into a valley */
+.valley{position:relative;margin-top:-10px;pointer-events:none}
 .valley svg{width:100%;height:auto}
-.wave-line{
-  fill:none;stroke:url(#auricGrad);stroke-width:2.25;
-  stroke-linecap:round;
-  stroke-dasharray:3400;stroke-dashoffset:3400;
-  animation:draw 2.4s cubic-bezier(.22,.68,.24,1) .25s forwards;
+.wave{
+  fill:none;stroke:var(--auric);stroke-width:2.6;stroke-linecap:round;
+  stroke-dasharray:3200;stroke-dashoffset:3200;
+  animation:draw 2.2s cubic-bezier(.22,.68,.24,1) forwards;
 }
-.wave-echo{
-  fill:none;stroke:var(--auric);stroke-width:1;opacity:0;
-  animation:echoIn 1.6s ease 1.5s forwards,drift 11s ease-in-out 2.6s infinite;
-}
-.valley-glow{opacity:0;animation:echoIn 1.8s ease 1.4s forwards}
+.w1{animation-delay:.20s}
+.w2{animation-delay:.40s;opacity:.66}
+.w3{animation-delay:.60s;opacity:.36;animation:draw 2.2s cubic-bezier(.22,.68,.24,1) .6s forwards,drift 12s ease-in-out 3s infinite}
+.valley-glow{opacity:0;animation:glowIn 1.8s ease 1.6s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-@keyframes echoIn{to{opacity:.22}}
-@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+@keyframes glowIn{to{opacity:1}}
+@keyframes drift{0%,100%{transform:translateY(58px)}50%{transform:translateY(66px)}}
 
 /* ---------- section base ---------- */
 .section{padding-top:clamp(76px,10vw,124px);padding-bottom:clamp(76px,10vw,124px)}
@@ -148,13 +148,13 @@ p:last-child{margin-bottom:0}
   transition:transform .3s cubic-bezier(.22,.68,.24,1),box-shadow .3s ease;
 }
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 40px -18px rgba(20,22,27,.18)}
-.card-icon{width:34px;height:34px;margin-bottom:22px;color:var(--auric)}
+.card-icon{width:34px;height:34px;margin-bottom:22px;color:var(--auric-deep)}
 .card h3{margin-bottom:10px}
 .card p{color:var(--ink-2);font-size:15.5px;line-height:1.55}
 .chip{
   display:inline-block;margin-top:20px;
   font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--auric);background:rgba(183,130,42,.09);
+  color:var(--auric-deep);background:rgba(209,154,46,.14);
   border-radius:100px;padding:5px 11px;
 }
 
@@ -184,22 +184,14 @@ p:last-child{margin-bottom:0}
 .contact .eyebrow{color:rgba(255,255,255,.42)}
 .contact h2{max-width:20ch;margin:0 auto}
 .contact p{color:rgba(255,255,255,.62);max-width:46ch;margin:22px auto 0;font-size:1.05rem}
-.mailto{
-  display:inline-block;margin-top:30px;
-  font-size:clamp(1.05rem,3vw,1.6rem);font-weight:500;letter-spacing:-.02em;
-  color:var(--auric-lit);text-decoration:none;
-  border-bottom:1px solid rgba(224,178,92,.35);padding-bottom:3px;
-  transition:border-color .25s ease;
-}
-.mailto:hover{border-bottom-color:var(--auric-lit)}
-.contact-cta{margin-top:38px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
 /* ---------- footer ---------- */
 .footer{padding:34px 0;font-size:13.5px;color:var(--ink-3)}
 .footer-in{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
 .footer a{text-decoration:none;color:var(--ink-2)}
 .footer a:hover{color:var(--ink)}
-.footer-mark{display:flex;align-items:center;gap:8px;color:var(--ink-2);font-weight:600;letter-spacing:-.02em}
+.footer-mark{display:flex;align-items:center;gap:9px;color:var(--ink-2);font-weight:600;letter-spacing:-.02em}
+.footer-mark svg{width:27px;height:18px;flex:none}
 
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.68,.24,1),transform .7s cubic-bezier(.22,.68,.24,1)}
@@ -207,13 +199,14 @@ p:last-child{margin-bottom:0}
 .cards .reveal:nth-child(2){transition-delay:.09s}
 .cards .reveal:nth-child(3){transition-delay:.18s}
 
-:focus-visible{outline:2px solid var(--auric);outline-offset:3px;border-radius:4px}
+:focus-visible{outline:2px solid var(--auric-deep);outline-offset:3px;border-radius:4px}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .wave-line{stroke-dashoffset:0}
-  .wave-echo,.valley-glow{opacity:.22}
+  .wave{stroke-dashoffset:0}
+  .w3{transform:translateY(58px)}
+  .valley-glow{opacity:1}
   .reveal{opacity:1;transform:none}
 }
 </style>
@@ -224,15 +217,15 @@ p:last-child{margin-bottom:0}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <linearGradient id="auricGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#b7822a" stop-opacity=".22"/>
-      <stop offset="26%" stop-color="#c9922f"/>
-      <stop offset="50%" stop-color="#e0b25c"/>
-      <stop offset="74%" stop-color="#c9922f"/>
-      <stop offset="100%" stop-color="#b7822a" stop-opacity=".22"/>
+      <stop offset="0%" stop-color="#d19a2e" stop-opacity=".18"/>
+      <stop offset="30%" stop-color="#d19a2e"/>
+      <stop offset="50%" stop-color="#e5b862"/>
+      <stop offset="70%" stop-color="#d19a2e"/>
+      <stop offset="100%" stop-color="#d19a2e" stop-opacity=".18"/>
     </linearGradient>
     <radialGradient id="troughGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#e0b25c" stop-opacity=".38"/>
-      <stop offset="100%" stop-color="#e0b25c" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#e5b862" stop-opacity=".34"/>
+      <stop offset="100%" stop-color="#e5b862" stop-opacity="0"/>
     </radialGradient>
   </defs>
 </svg>
@@ -240,9 +233,12 @@ p:last-child{margin-bottom:0}
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="mark" href="#top">
-      <svg viewBox="0 0 40 22" aria-hidden="true">
-        <path d="M1 11 C5 11 6 4 10 4 C14 4 15 11 20 17 C25 11 26 4 30 4 C34 4 35 11 39 11"
-              fill="none" stroke="#b7822a" stroke-width="2" stroke-linecap="round"/>
+      <svg viewBox="0 0 78 52" aria-hidden="true">
+        <g fill="none" stroke="#d19a2e" stroke-width="5" stroke-linecap="round">
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10"/>
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,15)"/>
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,30)"/>
+        </g>
       </svg>
       Auric Wave Valley
     </a>
@@ -250,7 +246,7 @@ p:last-child{margin-bottom:0}
       <a href="#build">What we build</a>
       <a href="#about">About</a>
       <a href="#how">How we work</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Company</a>
     </nav>
   </div>
 </header>
@@ -265,24 +261,17 @@ p:last-child{margin-bottom:0}
       <p class="lead">Auric Wave Valley builds consumer software — a family of small, focused apps you open without thinking, use for ninety seconds, and close knowing the thing is handled.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#build">See what we build</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="#contact">Who we are</a>
       </div>
       <p class="hero-note">First release in development</p>
     </div>
 
     <div class="valley" aria-hidden="true">
-      <svg viewBox="0 0 1440 330" preserveAspectRatio="none" style="height:clamp(150px,22vw,290px)">
-        <ellipse class="valley-glow" cx="720" cy="264" rx="340" ry="90" fill="url(#troughGlow)"/>
-        <path class="wave-echo"
-              d="M0 168 C90 168 130 168 170 168 C210 168 220 120 260 120 C300 120 310 206 350 206
-                 C390 206 400 140 445 140 C490 140 500 182 545 182 C600 182 620 252 720 264
-                 C820 252 840 182 895 182 C940 182 950 140 995 140 C1040 140 1050 206 1090 206
-                 C1130 206 1140 120 1180 120 C1220 120 1230 168 1270 168 C1330 168 1390 168 1440 168"/>
-        <path class="wave-line"
-              d="M0 160 C90 160 130 160 170 160 C210 160 220 108 260 108 C300 108 310 200 350 200
-                 C390 200 400 130 445 130 C490 130 500 176 545 176 C600 176 620 248 720 260
-                 C820 248 840 176 895 176 C940 176 950 130 995 130 C1040 130 1050 200 1090 200
-                 C1130 200 1140 108 1180 108 C1220 108 1230 160 1270 160 C1330 160 1390 160 1440 160"/>
+      <svg viewBox="0 0 1440 300" preserveAspectRatio="none" style="height:clamp(150px,22vw,280px)">
+        <ellipse class="valley-glow" cx="720" cy="250" rx="360" ry="86" fill="url(#troughGlow)"/>
+        <path class="wave w3" d="M0 120 C90 120 130 120 170 120 C210 120 220 74 260 74 C300 74 310 158 350 158 C390 158 400 96 445 96 C490 96 500 138 545 138 C600 138 620 196 720 206 C820 196 840 138 895 138 C940 138 950 96 995 96 C1040 96 1050 158 1090 158 C1130 158 1140 74 1180 74 C1220 74 1230 120 1270 120 C1330 120 1390 120 1440 120" transform="translate(0,58)"/>
+        <path class="wave w2" d="M0 120 C90 120 130 120 170 120 C210 120 220 74 260 74 C300 74 310 158 350 158 C390 158 400 96 445 96 C490 96 500 138 545 138 C600 138 620 196 720 206 C820 196 840 138 895 138 C940 138 950 96 995 96 C1040 96 1050 158 1090 158 C1130 158 1140 74 1180 74 C1220 74 1230 120 1270 120 C1330 120 1390 120 1440 120" transform="translate(0,29)"/>
+        <path class="wave w1" d="M0 120 C90 120 130 120 170 120 C210 120 220 74 260 74 C300 74 310 158 350 158 C390 158 400 96 445 96 C490 96 500 138 545 138 C600 138 620 196 720 206 C820 196 840 138 895 138 C940 138 950 96 995 96 C1040 96 1050 158 1090 158 C1130 158 1140 74 1180 74 C1220 74 1230 120 1270 120 C1330 120 1390 120 1440 120"/>
       </svg>
     </div>
   </section>
@@ -373,14 +362,9 @@ p:last-child{margin-bottom:0}
   <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="wrap">
-      <p class="eyebrow">Contact</p>
-      <h2>Tell us what's getting in your way.</h2>
-      <p>Partnerships, press, early access, or an idea for an app you wish existed — we read everything that comes in.</p>
-      <a class="mailto" href="mailto:hello@auricwavevalley.com">hello@auricwavevalley.com</a>
-      <div class="contact-cta">
-        <a class="btn btn-light" href="mailto:hello@auricwavevalley.com?subject=Early%20access">Ask for early access</a>
-        <a class="btn btn-outline" href="#build">Back to what we build</a>
-      </div>
+      <p class="eyebrow">The company</p>
+      <h2>Who we are.</h2>
+      <p>Auric Wave Valley is the software development arm of N2 Digital, an Australian registered company. Partnership, press and early-access enquiries are welcome — our contact address goes live alongside our first release.</p>
     </div>
   </section>
 
@@ -389,14 +373,17 @@ p:last-child{margin-bottom:0}
   <footer class="footer">
     <div class="wrap footer-in">
       <span class="footer-mark">
-        <svg viewBox="0 0 40 22" width="20" height="11" aria-hidden="true">
-          <path d="M1 11 C5 11 6 4 10 4 C14 4 15 11 20 17 C25 11 26 4 30 4 C34 4 35 11 39 11"
-                fill="none" stroke="#b7822a" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+        <svg viewBox="0 0 78 52" aria-hidden="true">
+        <g fill="none" stroke="#d19a2e" stroke-width="5" stroke-linecap="round">
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10"/>
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,15)"/>
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,30)"/>
+        </g>
+      </svg>
         Auric Wave Valley
       </span>
       <span>&copy; <span id="yr">2026</span> Auric Wave Valley. All rights reserved.</span>
-      <a href="mailto:hello@auricwavevalley.com">hello@auricwavevalley.com</a>
+      <span>Part of N2 Digital Pty Ltd &middot; ABN 61 700 972 425</span>
     </div>
   </footer>
 

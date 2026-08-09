@@ -8,7 +8,10 @@ Static website for Auric Wave Valley, hosted free on GitHub Pages with DNS at Cl
 |---|---|
 | `index.html` | The whole website — HTML, CSS and JS in one file. Edit this to change content. |
 | `404.html` | Shown when someone hits a URL that doesn't exist. |
-| `favicon.svg` | Browser tab icon. |
+| `favicon.svg` | Browser tab icon — the wave mark in gold on near-black. |
+| `logo-mark.svg` | The three-wave mark as scalable vector. Used inline in the header and footer. |
+| `logo-mark.png`, `logo-lockup.png` | Your original raster logos, kept in the repo for reuse. |
+| `og.png` | 1200x630 preview image shown when the site is shared on social or in chat apps. |
 | `CNAME` | Tells GitHub Pages the site lives at `auricwavevalley.com`. Do not delete. |
 | `robots.txt`, `sitemap.xml` | Search engine basics. |
 | `.nojekyll` | Tells GitHub to serve the files as-is. |
@@ -75,10 +78,13 @@ Open `index.html` on GitHub and click the pencil icon. Commit, and the change is
 
 Things you'll probably want to change:
 
-- **Email address** — `hello@auricwavevalley.com` appears five times in `index.html` and once in `404.html`. You'll need to set this mailbox up with an email provider before it works (Cloudflare Email Routing can forward it to a personal inbox for free).
+- **Contact details** — the site currently carries no email address or form, so there is no way for a visitor to reach you. When you have a mailbox ready, add it to the contact section as `<a class="entity-name" href="mailto:YOUR@ADDRESS">YOUR@ADDRESS</a>`. Cloudflare Email Routing will forward an address at your domain to a personal inbox for free.
+- **Company details** — the registered entity and ABN appear in the contact section and the footer. Update both if they change.
 - **The three cards** under "What we build" — swap the placeholder categories for your real app names once they're ready, and change the "In development" chips.
 - **Colours** — every colour is defined once at the top of the `<style>` block under `:root`. `--auric` is the gold accent.
-- **Social preview image** — add a 1200×630 image named `og.png` to the repo, then add `<meta property="og:image" content="https://auricwavevalley.com/og.png">` inside `<head>`.
+- **Logo** — the header and footer draw the mark as inline SVG, so it stays sharp at any size and needs no image request. To adjust it, edit the three `<path d="M1 19 …">` lines. `logo-mark.svg` is the same artwork as a standalone file.
+- **Brand gold** — `--auric: #d19a2e` is your logo gold, used for the mark, the hero waves and the accent rules. `--auric-deep: #8f6512` is a darkened version used only for small text and icons, where the lighter gold wouldn't be legible enough against white. Change both together if you shift the brand colour.
+- **Social preview** — replace `og.png` with any 1200x630 image; the tag pointing at it is already in `<head>`.
 
 ## Previewing on your own computer
 
