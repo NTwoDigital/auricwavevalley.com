@@ -1,6 +1,6 @@
 # auricwavevalley.com
 
-Static website for Auric Wave Valley, hosted free on GitHub Pages with DNS at Cloudflare.
+Static website for Auricwave Valley, hosted free on GitHub Pages with DNS at Cloudflare.
 
 ## Files
 
@@ -10,7 +10,8 @@ Static website for Auric Wave Valley, hosted free on GitHub Pages with DNS at Cl
 | `404.html` | Shown when someone hits a URL that doesn't exist. |
 | `favicon.svg` | Browser tab icon — the wave mark in gold on near-black. |
 | `logo-mark.svg` | The three-wave mark as scalable vector. Used inline in the header and footer. |
-| `logo-mark.png`, `logo-lockup.png` | Your original raster logos, kept in the repo for reuse. |
+| `logo-mark.png` | Your original raster mark. |
+| `logo-lockup-OLD-NAME.png` | Your original horizontal lockup. **It still reads "Auric Wave Valley"** — replace it with new artwork when you have it, then rename it to `logo-lockup.png`. |
 | `og.png` | 1200x630 preview image shown when the site is shared on social or in chat apps. |
 | `CNAME` | Tells GitHub Pages the site lives at `auricwavevalley.com`. Do not delete. |
 | `robots.txt`, `sitemap.xml` | Search engine basics. |
@@ -78,7 +79,7 @@ Open `index.html` on GitHub and click the pencil icon. Commit, and the change is
 
 Things you'll probably want to change:
 
-- **Contact details** — the site currently carries no email address or form, so there is no way for a visitor to reach you. When you have a mailbox ready, add it to the contact section as `<a class="entity-name" href="mailto:YOUR@ADDRESS">YOUR@ADDRESS</a>`. Cloudflare Email Routing will forward an address at your domain to a personal inbox for free.
+- **Email address** — `info@auricwavevalley.com` appears twice in `index.html` (the contact section and the footer). It won't receive anything until the mailbox exists: Cloudflare Email Routing forwards an address at your domain to a personal inbox for free, under **Email → Email Routing** in your Cloudflare dashboard.
 - **Company details** — the registered entity and ABN appear in the contact section and the footer. Update both if they change.
 - **The three cards** under "What we build" — swap the placeholder categories for your real app names once they're ready, and change the "In development" chips.
 - **Colours** — every colour is defined once at the top of the `<style>` block under `:root`. `--auric` is the gold accent.
