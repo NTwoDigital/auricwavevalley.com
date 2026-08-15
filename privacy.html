@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Auricwave Valley</title>
+<meta name="description" content="How Auricwave Valley collects, uses, discloses, transfers and stores your information.">
+<link rel="canonical" href="https://auricwavevalley.com/privacy.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f6f7f9">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://auricwavevalley.com/privacy.html">
+<meta property="og:title" content="Privacy Policy — Auricwave Valley">
+<meta property="og:description" content="How Auricwave Valley collects, uses, discloses, transfers and stores your information.">
+<meta property="og:image" content="https://auricwavevalley.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#14161b;
+  --ink-2:#5b6472;
+  --ink-3:#8b94a2;
+  --base:#f6f7f9;
+  --surface:#ffffff;
+  --line:#e3e7ec;
+  --auric:#d19a2e;
+  --auric-deep:#8f6512;
+  --auric-lit:#e5b862;
+  --deep:#161b23;
+  --sans:"Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --pad:clamp(20px,5vw,40px);
+  --maxw:1140px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--base);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin:0 0 18px;
+}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.028em;line-height:1.06}
+h1{font-size:clamp(2.2rem,5.4vw,3.4rem);font-weight:700;letter-spacing:-.035em}
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+.lead{font-size:clamp(1.02rem,2vw,1.2rem);color:var(--ink-2);line-height:1.55}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(246,247,249,.72);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease;
+}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:58px}
+.mark{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;letter-spacing:-.02em;font-size:15px}
+.mark svg{width:31px;height:21.1px;flex:none}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{text-decoration:none;font-size:14px;color:var(--ink-2);transition:color .2s ease}
+.nav-links a:hover{color:var(--ink)}
+@media(max-width:720px){.nav-links{display:none}}
+
+/* ---------- page head ---------- */
+.page-head{padding-top:clamp(56px,8vw,92px);padding-bottom:clamp(34px,5vw,52px)}
+.page-head .lead{max-width:58ch;margin-top:20px}
+.meta{
+  display:inline-block;margin-top:26px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--auric-deep);background:rgba(209,154,46,.14);
+  border-radius:100px;padding:6px 13px;text-indent:.12em;
+}
+
+/* ---------- layout ---------- */
+.doc-grid{
+  display:grid;
+  grid-template-columns:minmax(0,230px) minmax(0,1fr);
+  gap:clamp(30px,6vw,72px);
+  align-items:start;
+  padding-bottom:clamp(70px,9vw,116px);
+}
+@media(max-width:900px){.doc-grid{grid-template-columns:1fr;gap:12px}}
+
+/* table of contents */
+.toc{position:sticky;top:96px}
+@media(max-width:900px){
+  .toc{position:static;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin-bottom:34px}
+}
+.toc-title{
+  font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 16px;
+}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+.toc li{counter-increment:toc;margin-bottom:2px}
+.toc a{
+  display:block;text-decoration:none;font-size:13.5px;line-height:1.4;
+  color:var(--ink-2);padding:7px 0 7px 26px;position:relative;
+  border-left:1px solid transparent;transition:color .2s ease;
+}
+.toc a::before{
+  content:counter(toc,decimal-leading-zero);
+  position:absolute;left:0;top:7px;
+  font-family:var(--mono);font-size:10px;color:var(--ink-3);
+}
+.toc a:hover{color:var(--ink)}
+
+/* body copy */
+.doc{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(28px,4.5vw,54px)}
+.doc h2{
+  font-size:clamp(1.2rem,2.4vw,1.5rem);letter-spacing:-.02em;line-height:1.25;
+  margin:0 0 16px;padding-top:6px;scroll-margin-top:82px;
+}
+.doc section + section{margin-top:44px;padding-top:40px;border-top:1px solid var(--line)}
+.doc p{color:var(--ink-2);font-size:16px;line-height:1.68}
+.doc strong{color:var(--ink);font-weight:600}
+.doc ul{margin:0 0 1.05em;padding-left:0;list-style:none}
+.doc li{
+  color:var(--ink-2);font-size:16px;line-height:1.6;
+  position:relative;padding-left:22px;margin-bottom:9px;
+}
+.doc li::before{
+  content:"";position:absolute;left:2px;top:11px;
+  width:6px;height:1.5px;background:var(--auric);border-radius:2px;
+}
+.doc a{color:var(--auric-deep);text-decoration:none;border-bottom:1px solid rgba(209,154,46,.4);transition:border-color .2s ease}
+.doc a:hover{border-bottom-color:var(--auric-deep)}
+
+/* contact block */
+.contact-block{
+  background:var(--base);border:1px solid var(--line);border-radius:16px;
+  padding:26px 28px;margin-top:8px;
+}
+.contact-block p{margin:0 0 6px;font-size:15.5px}
+.contact-block p:last-child{margin-bottom:0}
+.contact-block .org{color:var(--ink);font-weight:600;font-size:17px;letter-spacing:-.015em}
+
+/* ---------- footer ---------- */
+.rule{height:1px;background:var(--line);border:0;margin:0}
+.footer{padding:32px 0 40px;font-size:13.5px;color:var(--ink-3)}
+.footer-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:20px}
+.footer-mark{display:flex;align-items:center;gap:9px;color:var(--ink-2);font-weight:600;letter-spacing:-.02em;font-size:14px}
+.footer-mark svg{width:27px;height:18.3px;flex:none}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px 26px;flex-wrap:wrap;
+  padding-top:18px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink-3);
+}
+.footer-legal{display:flex;align-items:center;flex-wrap:wrap}
+.footer-legal a{
+  color:var(--ink-2);text-decoration:none;padding:0 14px;
+  border-left:1px solid var(--line);line-height:1.1;
+}
+.footer-legal a:first-child{padding-left:0;border-left:0}
+.footer-legal a:hover{color:var(--ink)}
+@media(max-width:720px){
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:12px}
+  .footer-legal a{padding-left:0;padding-right:14px;border-left:0;border-right:1px solid var(--line)}
+  .footer-legal a:last-child{border-right:0;padding-right:0}
+}
+
+:focus-visible{outline:2px solid var(--auric-deep);outline-offset:3px;border-radius:4px}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="mark" href="/">
+      <svg viewBox="0 0 81 55" aria-hidden="true">
+        <g fill="none" stroke="#d19a2e" stroke-width="5" stroke-linecap="round" transform="translate(3.5,1.5)">
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10"/>
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,15)"/>
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,30)"/>
+        </g>
+      </svg>
+      Auricwave Valley
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="/#build">What we build</a>
+      <a href="/#about">About</a>
+      <a href="/#how">How we work</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap page-head">
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="lead">Your privacy is very important to Auricwave Valley. This policy explains how we collect, use, disclose, transfer and store your information when you visit our website, use our applications and services, or contact us.</p>
+    <p class="meta">Last modified: 15 August 2026</p>
+  </div>
+
+  <div class="wrap doc-grid">
+
+    <aside class="toc" aria-label="On this page">
+      <p class="toc-title">On this page</p>
+      <ol>
+        <li><a href="#collection">Collection and use of personal information</a></li>
+        <li><a href="#what">What personal information we collect</a></li>
+        <li><a href="#apple">Information stored using Apple services</a></li>
+        <li><a href="#how-we-use">How we use your personal information</a></li>
+        <li><a href="#location">Location information</a></li>
+        <li><a href="#technical">Non-personal and technical information</a></li>
+        <li><a href="#cookies">Cookies and other technologies</a></li>
+        <li><a href="#disclosure">Disclosure to third parties</a></li>
+        <li><a href="#international">International data transfers</a></li>
+        <li><a href="#protection">Protection of personal information</a></li>
+        <li><a href="#access">Access to personal information</a></li>
+        <li><a href="#deletion">Deletion of personal information</a></li>
+        <li><a href="#retention">Retention of personal information</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#communications">Direct communications</a></li>
+        <li><a href="#third-party">Third-party sites and services</a></li>
+        <li><a href="#questions">Privacy questions</a></li>
+        <li><a href="#changes">Changes to this Privacy Policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </aside>
+
+    <article class="doc">
+
+      <section id="intro">
+        <p>Auricwave Valley is a business name of <strong>N2 Digital Pty Ltd</strong>, an Australian company (ABN 61 700 972 425).</p>
+        <p>We are committed to handling personal information responsibly and in accordance with applicable privacy and data protection laws.</p>
+        <p>Please take a moment to read this Privacy Policy and contact us if you have any questions.</p>
+      </section>
+
+      <section id="collection">
+        <h2>Collection and use of personal information</h2>
+        <p>Personal information is information that can be used to identify or reasonably identify an individual.</p>
+        <p>You may provide personal information when you use our applications, visit our website, contact us, request support, create an account, or otherwise interact with our services.</p>
+        <p>You are not generally required to provide personal information to us. However, if you choose not to provide information that is necessary for a particular feature or service, we may not be able to provide that feature or service to you.</p>
+        <p>We collect and process personal information for the purposes described in this Privacy Policy and in accordance with applicable data protection and privacy laws.</p>
+      </section>
+
+      <section id="what">
+        <h2>What personal information we collect</h2>
+        <p>The information we collect depends on how you use our services.</p>
+        <p>When you visit our website, use our applications, contact us, or use our services, we may collect information such as:</p>
+        <ul>
+          <li>your name and email address;</li>
+          <li>information you provide when contacting us;</li>
+          <li>account information;</li>
+          <li>device information;</li>
+          <li>operating system and application version;</li>
+          <li>IP address and other technical information;</li>
+          <li>crash and diagnostic information;</li>
+          <li>information necessary to provide customer support; and</li>
+          <li>other information you voluntarily provide to us.</li>
+        </ul>
+        <p>When using our applications, you may choose to enter information such as expenses, transactions, trips, vehicle information, dates, times, notes, logbook records, and other information required for the functionality of the application.</p>
+        <p>The information you enter into our applications is used primarily to provide the features and functionality you have requested.</p>
+        <p>Depending on the features you use and the permissions you grant, our applications may also access information such as your device location. Location information is only accessed where it is reasonably necessary for a feature that you have chosen to use.</p>
+      </section>
+
+      <section id="apple">
+        <h2>Information stored using Apple services</h2>
+        <p>Our applications may use Apple services, including <strong>iCloud and CloudKit</strong>, to store and synchronise information associated with your use of our applications.</p>
+        <p>Information stored using these services may be processed by Apple as necessary to provide Apple's services.</p>
+        <p>Our use of Apple services does not change the terms or privacy practices that apply between you and Apple. Apple's handling of information is governed by Apple's own terms and privacy policy.</p>
+        <p>You can control certain permissions and access to information through the settings on your Apple devices.</p>
+      </section>
+
+      <section id="how-we-use">
+        <h2>How we use your personal information</h2>
+        <p>We use the personal information we collect to provide, maintain, protect, and improve our products and services.</p>
+        <p>This may include using information to:</p>
+        <ul>
+          <li>provide the features and functionality of our applications;</li>
+          <li>store and synchronise your information;</li>
+          <li>provide customer support;</li>
+          <li>respond to your enquiries;</li>
+          <li>diagnose technical problems and crashes;</li>
+          <li>maintain the security and reliability of our services;</li>
+          <li>develop and improve our products;</li>
+          <li>understand how our services are used;</li>
+          <li>communicate important information about our services; and</li>
+          <li>comply with applicable legal obligations.</li>
+        </ul>
+        <p>We may also use personal information for internal purposes such as troubleshooting, auditing, data analysis, research, and improving our products and customer communications.</p>
+        <p><strong>We do not sell your personal information.</strong></p>
+        <p>We do not use the contents of your expense, logbook, trip, vehicle, or other application records for unrelated advertising purposes.</p>
+      </section>
+
+      <section id="location">
+        <h2>Location information</h2>
+        <p>Some features of our applications may use location information.</p>
+        <p>Where location access is required, your device will request permission where required by the applicable operating system.</p>
+        <p>You can allow or deny location access through your device settings. You can also withdraw previously granted permission.</p>
+        <p>If you do not provide location access, certain features that depend on location information may not function or may have reduced functionality.</p>
+        <p>We do not access precise location information unless it is reasonably necessary for a feature you have chosen to use.</p>
+      </section>
+
+      <section id="technical">
+        <h2>Non-personal and technical information</h2>
+        <p>We may collect information that does not, on its own, reasonably identify you.</p>
+        <p>This may include information such as:</p>
+        <ul>
+          <li>device model;</li>
+          <li>operating system;</li>
+          <li>application version;</li>
+          <li>language and regional settings;</li>
+          <li>general technical information;</li>
+          <li>crash and diagnostic information; and</li>
+          <li>information relating to the performance and operation of our applications.</li>
+        </ul>
+        <p>We may use this information to diagnose problems, improve application performance, maintain security, and develop our products.</p>
+        <p>Where information has been aggregated or de-identified so that it can no longer reasonably identify an individual, we may use that information for legitimate business purposes.</p>
+        <p>If non-personal information is combined with personal information in a way that allows you to be identified, we will treat the combined information as personal information.</p>
+      </section>
+
+      <section id="cookies">
+        <h2>Cookies and other technologies</h2>
+        <p>Our website may use cookies and similar technologies that are necessary for the operation, security, and performance of the website.</p>
+        <p>Cookies may allow us to understand general website usage, remember preferences, maintain security, and improve the user experience.</p>
+        <p>You can control or disable cookies through your web browser settings. However, disabling certain cookies may affect the functionality of our website.</p>
+        <p>If we introduce additional cookies or similar technologies that require consent under applicable law, we will provide appropriate notice and obtain consent where required.</p>
+      </section>
+
+      <section id="disclosure">
+        <h2>Disclosure to third parties</h2>
+        <p><strong>We do not sell, rent, or trade your personal information.</strong></p>
+        <p>We may share personal information with companies and service providers that help us operate our business and provide our products and services.</p>
+        <p>These service providers may provide services such as:</p>
+        <ul>
+          <li>cloud storage and infrastructure;</li>
+          <li>website hosting;</li>
+          <li>customer support;</li>
+          <li>application development and maintenance;</li>
+          <li>security and technical services;</li>
+          <li>crash and diagnostic reporting;</li>
+          <li>communications; and</li>
+          <li>other services necessary to operate our products.</li>
+        </ul>
+        <p>We only provide service providers with information that is reasonably necessary for them to provide their services.</p>
+        <p>Where appropriate, we require our service providers to protect personal information and only use it for the purposes for which it has been provided.</p>
+        <p>We may also disclose personal information where reasonably necessary to:</p>
+        <ul>
+          <li>comply with applicable laws, regulations, legal processes, or enforceable governmental requests;</li>
+          <li>establish, exercise, or defend our legal rights;</li>
+          <li>investigate suspected fraud, misuse, or security issues;</li>
+          <li>enforce our terms and conditions;</li>
+          <li>protect the rights, property, or safety of Auricwave Valley, our users, or others; or</li>
+          <li>protect the security and integrity of our services.</li>
+        </ul>
+        <p>If N2 Digital Pty Ltd or Auricwave Valley is involved in a reorganisation, merger, acquisition, financing, sale of assets, or similar business transaction, personal information may be transferred as part of that transaction where permitted by applicable law.</p>
+      </section>
+
+      <section id="international">
+        <h2>International data transfers</h2>
+        <p>Some of the companies and service providers we use may operate or store information outside your country of residence.</p>
+        <p>As a result, your personal information may be transferred to, stored in, or accessed from countries other than the country in which you live.</p>
+        <p>These countries may have privacy and data protection laws that differ from those in your country.</p>
+        <p>Where required by applicable law, we take reasonable steps to ensure that international transfers of personal information are subject to appropriate safeguards.</p>
+        <p>The countries in which information is processed may change as our technology and service providers change.</p>
+      </section>
+
+      <section id="protection">
+        <h2>Protection of personal information</h2>
+        <p>We take reasonable and appropriate security measures to protect personal information against unauthorised access, alteration, disclosure, loss, misuse, or destruction.</p>
+        <p>Depending on the nature of the information and the service involved, these measures may include access controls, authentication, encryption in transit, secure development practices, system monitoring, backups, and security measures provided by our technology providers.</p>
+        <p>We restrict access to personal information to people and service providers who reasonably need access to perform their functions.</p>
+        <p>However, no method of transmitting or storing information electronically is completely secure. We therefore cannot guarantee the absolute security of information transmitted to or stored by us.</p>
+        <p>You are also responsible for maintaining the security of your devices, Apple account, passwords, and other authentication information.</p>
+      </section>
+
+      <section id="access">
+        <h2>Access to personal information</h2>
+        <p>Depending on the laws that apply to you, you may have the right to request access to personal information that we hold about you.</p>
+        <p>You may also request that we correct personal information that is inaccurate, incomplete, misleading, or out of date.</p>
+        <p>To make a request, please contact us at <a href="mailto:privacy@auricwavevalley.com">privacy@auricwavevalley.com</a>.</p>
+        <p>We may need to verify your identity before providing access to personal information or making changes to your information.</p>
+        <p>We may decline a request where permitted or required by applicable law, including where providing access would adversely affect the rights or privacy of others or where the request is otherwise subject to a legal exception.</p>
+      </section>
+
+      <section id="deletion">
+        <h2>Deletion of personal information</h2>
+        <p>Depending on the laws that apply to you, you may have the right to request deletion of personal information that we hold about you.</p>
+        <p>You can contact us at <a href="mailto:privacy@auricwavevalley.com">privacy@auricwavevalley.com</a>.</p>
+        <p>We will consider deletion requests in accordance with applicable law.</p>
+        <p>There may be circumstances where we are required or permitted to retain certain information, including where retention is necessary to comply with legal obligations, resolve disputes, enforce agreements, or protect our legitimate interests.</p>
+        <p>If information is stored through Apple services such as iCloud or CloudKit, deletion may also depend on the operation of those services and information that remains associated with your Apple account or devices.</p>
+        <p>Deleting your information may result in the loss of application records or functionality that depends on that information.</p>
+      </section>
+
+      <section id="retention">
+        <h2>Retention of personal information</h2>
+        <p>We retain personal information for as long as reasonably necessary to provide our services, fulfil the purposes described in this Privacy Policy, comply with our legal obligations, resolve disputes, and enforce our agreements.</p>
+        <p>The length of time we retain information depends on the type of information and why it was collected.</p>
+        <p>When personal information is no longer reasonably required, we will take reasonable steps to delete, destroy, or de-identify it, unless we are required or permitted by law to retain it.</p>
+      </section>
+
+      <section id="children">
+        <h2>Children</h2>
+        <p>We do not knowingly collect personal information from children under <strong>16</strong>, or the equivalent minimum age in the relevant jurisdiction, unless their parent or legal guardian has provided verifiable consent.</p>
+        <p>If we learn that we have collected personal information from a child under 16, or the equivalent minimum age in the relevant jurisdiction, without the required parental or guardian consent, we will take reasonable steps to delete this information as soon as possible.</p>
+        <p>Parents or legal guardians who believe that a child has provided personal information to us can contact us at <a href="mailto:privacy@auricwavevalley.com">privacy@auricwavevalley.com</a>.</p>
+      </section>
+
+      <section id="communications">
+        <h2>Direct communications</h2>
+        <p>We may use your contact information to respond to enquiries, provide customer support, communicate important information about our services, and, where permitted by applicable law, provide information about our products and services.</p>
+        <p>You may contact us at any time if you no longer wish to receive promotional communications.</p>
+        <p>We will continue to send communications that are necessary to provide our services or notify you about important matters, such as changes to our terms, services, or policies.</p>
+      </section>
+
+      <section id="third-party">
+        <h2>Third-party sites and services</h2>
+        <p>Our website or applications may contain links to third-party websites or services.</p>
+        <p>We are not responsible for the privacy practices, security, or content of third-party websites or services.</p>
+        <p>We encourage you to review the privacy policy of any third-party service before providing personal information to that service.</p>
+      </section>
+
+      <section id="questions">
+        <h2>Privacy questions</h2>
+        <p>If you have any questions regarding our Privacy Policy or data processing, or if you would like to make a complaint about a possible breach of applicable privacy or data protection laws, please contact us at <a href="mailto:privacy@auricwavevalley.com">privacy@auricwavevalley.com</a>.</p>
+        <p>You may also have the right to file a complaint with the relevant privacy or data protection regulator in your jurisdiction.</p>
+      </section>
+
+      <section id="changes">
+        <h2>Changes to this Privacy Policy</h2>
+        <p>Our Privacy Policy may change from time to time.</p>
+        <p>When we change the policy, we will post the changes on this page and update the <strong>Last modified</strong> date above.</p>
+        <p>If the policy changes in a significant way, we may also provide an additional notice through our website, applications, or other appropriate communication channels.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact us</h2>
+        <div class="contact-block">
+          <p class="org">Auricwave Valley</p>
+          <p>A business name of <strong>N2 Digital Pty Ltd</strong></p>
+          <p>ABN 61 700 972 425</p>
+          <p>Email: <a href="mailto:privacy@auricwavevalley.com">privacy@auricwavevalley.com</a></p>
+          <p>Website: <a href="https://auricwavevalley.com">auricwavevalley.com</a></p>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+</main>
+
+<hr class="rule">
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <span class="footer-mark">
+        <svg viewBox="0 0 81 55" aria-hidden="true">
+        <g fill="none" stroke="#d19a2e" stroke-width="5" stroke-linecap="round" transform="translate(3.5,1.5)">
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10"/>
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,15)"/>
+          <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,30)"/>
+        </g>
+      </svg>
+        Auricwave Valley
+      </span>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">Copyright &copy; <span id="yr">2026</span> Auricwave Valley. All rights reserved.</span>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </nav>
+      <span class="footer-entity">Part of N2 Digital Pty Ltd &middot; ABN 61 700 972 425</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 8); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+</script>
+</body>
+</html>

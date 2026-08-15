@@ -83,7 +83,7 @@ p:last-child{margin-bottom:0}
 .nav.scrolled{border-bottom-color:var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:58px}
 .mark{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;letter-spacing:-.02em;font-size:15px}
-.mark svg{width:31px;height:21px;flex:none}
+.mark svg{width:31px;height:21.1px;flex:none}
 .nav-links{display:flex;gap:30px;align-items:center}
 .nav-links a{
   text-decoration:none;font-size:14px;color:var(--ink-2);
@@ -111,27 +111,30 @@ p:last-child{margin-bottom:0}
 .btn-outline:hover{border-color:rgba(255,255,255,.6)}
 
 /* ---------- hero ---------- */
+.hero .eyebrow,.contact .eyebrow{text-indent:.16em}
 .hero{position:relative;padding-top:clamp(72px,13vh,132px);padding-bottom:0;text-align:center;overflow:hidden}
 .hero h1{max-width:15ch;margin:0 auto}
 .hero .lead{max-width:53ch;margin:26px auto 0}
-.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
-.hero-note{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-top:26px}
+.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px;margin-bottom:14px}
 
 /* signature: the brand waves, scaled up into a valley */
 .valley{position:relative;margin-top:-10px;pointer-events:none}
 .valley svg{width:100%;height:auto}
 .wave{
-  fill:none;stroke:var(--auric);stroke-width:2.6;stroke-linecap:round;
+  fill:none;stroke:url(#auricGrad);stroke-width:2.6;stroke-linecap:round;
   stroke-dasharray:3200;stroke-dashoffset:3200;
   animation:draw 2.2s cubic-bezier(.22,.68,.24,1) forwards;
 }
-.w1{animation-delay:.20s}
-.w2{animation-delay:.40s;opacity:.66}
-.w3{animation-delay:.60s;opacity:.36;animation:draw 2.2s cubic-bezier(.22,.68,.24,1) .6s forwards,drift 12s ease-in-out 3s infinite}
+.w1{animation-name:draw,drift;animation-duration:2.2s,12s;animation-timing-function:cubic-bezier(.22,.68,.24,1),ease-in-out;animation-delay:.2s,2.6s;animation-iteration-count:1,infinite;animation-fill-mode:forwards,none}
 .valley-glow{opacity:0;animation:glowIn 1.8s ease 1.6s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes glowIn{to{opacity:1}}
-@keyframes drift{0%,100%{transform:translateY(58px)}50%{transform:translateY(66px)}}
+.wave-echo{
+  fill:none;stroke:var(--auric);stroke-width:1.1;stroke-linecap:round;opacity:0;
+  animation:echoIn 1.7s ease 1.3s forwards,drift 12s ease-in-out 2.8s infinite;
+}
+@keyframes echoIn{to{opacity:.3}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 
 /* ---------- section base ---------- */
 .section{padding-top:clamp(76px,10vw,124px);padding-bottom:clamp(76px,10vw,124px)}
@@ -151,12 +154,6 @@ p:last-child{margin-bottom:0}
 .card-icon{width:34px;height:34px;margin-bottom:22px;color:var(--auric-deep)}
 .card h3{margin-bottom:10px}
 .card p{color:var(--ink-2);font-size:15.5px;line-height:1.55}
-.chip{
-  display:inline-block;margin-top:20px;
-  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--auric-deep);background:rgba(209,154,46,.14);
-  border-radius:100px;padding:5px 11px;
-}
 
 /* ---------- about ---------- */
 .about{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -194,12 +191,28 @@ p:last-child{margin-bottom:0}
 .mailto:hover{border-bottom-color:var(--auric-lit)}
 
 /* ---------- footer ---------- */
-.footer{padding:34px 0;font-size:13.5px;color:var(--ink-3)}
-.footer-in{display:flex;justify-content:space-between;align-items:center;gap:14px 28px;flex-wrap:wrap}
-.footer a{text-decoration:none;color:var(--ink-2)}
-.footer a:hover{color:var(--ink)}
-.footer-mark{display:flex;align-items:center;gap:9px;color:var(--ink-2);font-weight:600;letter-spacing:-.02em}
-.footer-mark svg{width:27px;height:18px;flex:none}
+.footer{padding:32px 0 40px;font-size:13.5px;color:var(--ink-3)}
+.footer-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:20px}
+.footer-mark{display:flex;align-items:center;gap:9px;color:var(--ink-2);font-weight:600;letter-spacing:-.02em;font-size:14px}
+.footer-mark svg{width:27px;height:18.3px;flex:none}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px 26px;flex-wrap:wrap;
+  padding-top:18px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink-3);
+}
+.footer-legal{display:flex;align-items:center;flex-wrap:wrap}
+.footer-legal a{
+  color:var(--ink-2);text-decoration:none;padding:0 14px;
+  border-left:1px solid var(--line);line-height:1.1;
+}
+.footer-legal a:first-child{padding-left:0;border-left:0}
+.footer-legal a:hover{color:var(--ink)}
+@media(max-width:720px){
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:12px}
+  .footer-legal a{padding-left:0;padding-right:14px;border-left:0;border-right:1px solid var(--line)}
+  .footer-legal a:last-child{border-right:0;padding-right:0}
+}
 
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.68,.24,1),transform .7s cubic-bezier(.22,.68,.24,1)}
@@ -213,8 +226,8 @@ p:last-child{margin-bottom:0}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .wave{stroke-dashoffset:0}
-  .w3{transform:translateY(58px)}
-  .valley-glow{opacity:1}
+    .valley-glow{opacity:1}
+  .wave-echo{opacity:.3}
   .reveal{opacity:1;transform:none}
 }
 </style>
@@ -241,8 +254,8 @@ p:last-child{margin-bottom:0}
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="mark" href="#top">
-      <svg viewBox="0 0 78 52" aria-hidden="true">
-        <g fill="none" stroke="#d19a2e" stroke-width="5" stroke-linecap="round">
+      <svg viewBox="0 0 81 55" aria-hidden="true">
+        <g fill="none" stroke="#d19a2e" stroke-width="5" stroke-linecap="round" transform="translate(3.5,1.5)">
           <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10"/>
           <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,15)"/>
           <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,30)"/>
@@ -271,14 +284,12 @@ p:last-child{margin-bottom:0}
         <a class="btn btn-primary" href="#build">See what we build</a>
         <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
-      <p class="hero-note">First release in development</p>
     </div>
 
     <div class="valley" aria-hidden="true">
-      <svg viewBox="0 0 1440 300" preserveAspectRatio="none" style="height:clamp(150px,22vw,280px)">
-        <ellipse class="valley-glow" cx="720" cy="250" rx="360" ry="86" fill="url(#troughGlow)"/>
-        <path class="wave w3" d="M0 120 C90 120 130 120 170 120 C210 120 220 74 260 74 C300 74 310 158 350 158 C390 158 400 96 445 96 C490 96 500 138 545 138 C600 138 620 196 720 206 C820 196 840 138 895 138 C940 138 950 96 995 96 C1040 96 1050 158 1090 158 C1130 158 1140 74 1180 74 C1220 74 1230 120 1270 120 C1330 120 1390 120 1440 120" transform="translate(0,58)"/>
-        <path class="wave w2" d="M0 120 C90 120 130 120 170 120 C210 120 220 74 260 74 C300 74 310 158 350 158 C390 158 400 96 445 96 C490 96 500 138 545 138 C600 138 620 196 720 206 C820 196 840 138 895 138 C940 138 950 96 995 96 C1040 96 1050 158 1090 158 C1130 158 1140 74 1180 74 C1220 74 1230 120 1270 120 C1330 120 1390 120 1440 120" transform="translate(0,29)"/>
+      <svg viewBox="0 0 1440 260" preserveAspectRatio="none" style="height:clamp(130px,18vw,230px)">
+        <ellipse class="valley-glow" cx="720" cy="208" rx="350" ry="74" fill="url(#troughGlow)"/>
+        <path class="wave-echo" d="M0 131 C90 131 130 131 170 131 C210 131 220 85 260 85 C300 85 310 169 350 169 C390 169 400 107 445 107 C490 107 500 149 545 149 C600 149 620 207 720 217 C820 207 840 149 895 149 C940 149 950 107 995 107 C1040 107 1050 169 1090 169 C1130 169 1140 85 1180 85 C1220 85 1230 131 1270 131 C1330 131 1390 131 1440 131"/>
         <path class="wave w1" d="M0 120 C90 120 130 120 170 120 C210 120 220 74 260 74 C300 74 310 158 350 158 C390 158 400 96 445 96 C490 96 500 138 545 138 C600 138 620 196 720 206 C820 196 840 138 895 138 C940 138 950 96 995 96 C1040 96 1050 158 1090 158 C1130 158 1140 74 1180 74 C1220 74 1230 120 1270 120 C1330 120 1390 120 1440 120"/>
       </svg>
     </div>
@@ -300,7 +311,6 @@ p:last-child{margin-bottom:0}
           </svg>
           <h3>Everyday organisation</h3>
           <p>Lists, plans and reminders that need no setup and no manual. Write it down, get on with your day, and find it exactly where you left it.</p>
-          <span class="chip">In development</span>
         </article>
 
         <article class="card reveal">
@@ -309,7 +319,6 @@ p:last-child{margin-bottom:0}
           </svg>
           <h3>Money and admin</h3>
           <p>The quiet costs — subscriptions, renewals, receipts, warranties. We track the dates so a forgotten one never costs you again.</p>
-          <span class="chip">In development</span>
         </article>
 
         <article class="card reveal">
@@ -318,7 +327,6 @@ p:last-child{margin-bottom:0}
           </svg>
           <h3>Home and family</h3>
           <p>Shared groceries, chores and calendars that actually stay in sync — so the household runs on one list instead of four conversations.</p>
-          <span class="chip">In development</span>
         </article>
       </div>
     </div>
@@ -380,10 +388,11 @@ p:last-child{margin-bottom:0}
   <hr class="rule">
 
   <footer class="footer">
-    <div class="wrap footer-in">
+  <div class="wrap">
+    <div class="footer-top">
       <span class="footer-mark">
-        <svg viewBox="0 0 78 52" aria-hidden="true">
-        <g fill="none" stroke="#d19a2e" stroke-width="5" stroke-linecap="round">
+        <svg viewBox="0 0 81 55" aria-hidden="true">
+        <g fill="none" stroke="#d19a2e" stroke-width="5" stroke-linecap="round" transform="translate(3.5,1.5)">
           <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10"/>
           <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,15)"/>
           <path d="M1 19 C9 19 11 3 25 3 C39 3 43 19 55 19 C63 19 67 14 73 10" transform="translate(0,30)"/>
@@ -391,11 +400,17 @@ p:last-child{margin-bottom:0}
       </svg>
         Auricwave Valley
       </span>
-      <span>&copy; <span id="yr">2026</span> Auricwave Valley. All rights reserved.</span>
-      <a href="mailto:info@auricwavevalley.com">info@auricwavevalley.com</a>
-      <span>Part of N2 Digital Pty Ltd &middot; ABN 61 700 972 425</span>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <span class="footer-copy">Copyright &copy; <span id="yr">2026</span> Auricwave Valley. All rights reserved.</span>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </nav>
+      <span class="footer-entity">Part of N2 Digital Pty Ltd &middot; ABN 61 700 972 425</span>
+    </div>
+  </div>
+</footer>
 
 </main>
 

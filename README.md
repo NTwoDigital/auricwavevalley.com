@@ -8,6 +8,8 @@ Static website for Auricwave Valley, hosted free on GitHub Pages with DNS at Clo
 |---|---|
 | `index.html` | The whole website — HTML, CSS and JS in one file. Edit this to change content. |
 | `404.html` | Shown when someone hits a URL that doesn't exist. |
+| `privacy.html` | The privacy policy, at `auricwavevalley.com/privacy.html`. Linked from the footer of every page. |
+| `terms.html` | The Terms of Use, at `auricwavevalley.com/terms.html`. Linked from the footer of every page. |
 | `favicon.svg` | Browser tab icon — the wave mark in gold on near-black. |
 | `logo-mark.svg` | The three-wave mark as scalable vector. Used inline in the header and footer. |
 | `logo-mark.png` | Your original raster mark. |
@@ -79,9 +81,12 @@ Open `index.html` on GitHub and click the pencil icon. Commit, and the change is
 
 Things you'll probably want to change:
 
-- **Email address** — `info@auricwavevalley.com` appears twice in `index.html` (the contact section and the footer). It won't receive anything until the mailbox exists: Cloudflare Email Routing forwards an address at your domain to a personal inbox for free, under **Email → Email Routing** in your Cloudflare dashboard.
+- **Legal pages** — `privacy.html` and `terms.html` share the same structure and styling. Each section is a `<section>` with an `id`, and the numbered list at the left links to those ids. If you add a section, add a matching entry to that list. Update the "Last modified" date near the top whenever either document changes.
+
+  The terms were drafted for an Australian company selling consumer apps through the App Store. Two clauses in particular assume that: the Apple App Store section (required by Apple's own developer agreement if you distribute on iOS) and the Australian Consumer Law section. If you later distribute on Google Play or sell direct, those sections need revisiting.
+- **Email addresses** — `info@auricwavevalley.com` appears twice in `index.html` (the contact section and the footer); `privacy@auricwavevalley.com` appears six times in `privacy.html`. It won't receive anything until the mailbox exists: Cloudflare Email Routing forwards an address at your domain to a personal inbox for free, under **Email → Email Routing** in your Cloudflare dashboard.
 - **Company details** — the registered entity and ABN appear in the contact section and the footer. Update both if they change.
-- **The three cards** under "What we build" — swap the placeholder categories for your real app names once they're ready, and change the "In development" chips.
+- **The three cards** under "What we build" — swap the placeholder categories for your real app names once they're ready.
 - **Colours** — every colour is defined once at the top of the `<style>` block under `:root`. `--auric` is the gold accent.
 - **Logo** — the header and footer draw the mark as inline SVG, so it stays sharp at any size and needs no image request. To adjust it, edit the three `<path d="M1 19 …">` lines. `logo-mark.svg` is the same artwork as a standalone file.
 - **Brand gold** — `--auric: #d19a2e` is your logo gold, used for the mark, the hero waves and the accent rules. `--auric-deep: #8f6512` is a darkened version used only for small text and icons, where the lighter gold wouldn't be legible enough against white. Change both together if you shift the brand colour.
