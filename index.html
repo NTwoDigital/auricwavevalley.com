@@ -214,6 +214,36 @@ p:last-child{margin-bottom:0}
   .footer-legal a:last-child{border-right:0;padding-right:0}
 }
 
+
+/* ---------- apps ---------- */
+.apps{padding-top:clamp(56px,8vw,96px)}
+.app-feature + .app-feature{margin-top:20px}
+.app-feature.flip .app-shots{order:-1}
+@media(max-width:880px){.app-feature.flip .app-shots{order:0}}
+.app-feature{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);
+  background:var(--deep);color:#fff;border-radius:28px;overflow:hidden;margin-top:48px;
+}
+@media(max-width:880px){.app-feature{grid-template-columns:1fr}}
+.app-copy{padding:clamp(30px,5vw,56px);display:flex;flex-direction:column;gap:18px;min-width:0}
+.app-id{display:flex;align-items:center;gap:16px}
+.app-id img{width:72px;height:72px;border-radius:22.5%;box-shadow:0 0 0 1px rgba(255,255,255,.12);flex:none}
+.app-id .tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--auric-lit);margin:0 0 4px}
+.app-id h3{font-size:clamp(1.4rem,2.6vw,1.75rem)}
+.app-copy .app-lead{font-size:clamp(1.05rem,1.8vw,1.2rem);color:rgba(255,255,255,.72);line-height:1.55;max-width:44ch;margin:0}
+.app-points{list-style:none;margin:0;padding:0;display:grid;gap:8px;color:rgba(255,255,255,.62);font-size:15px}
+.app-points li{display:flex;gap:10px;align-items:baseline}
+.app-points li::before{content:"";width:14px;height:2px;background:var(--auric);flex:none;transform:translateY(-4px)}
+.app-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:8px}
+.badge{display:inline-block;padding:12px;margin:-12px}
+.badge img{height:48px;width:auto}
+.badge:hover{opacity:.88}
+.app-shots{position:relative;display:flex;justify-content:center;align-items:center;gap:16px;padding:36px 28px;background:radial-gradient(70% 60% at 50% 100%,rgba(229,184,98,.22),transparent 70%)}
+.app-shots img{width:min(42%,180px);height:auto}
+@media(max-width:880px){.app-shots{padding-top:4px}}
+.apps-more{margin-top:18px;font-size:14px;color:var(--ink-3)}
+.footer-credit{font-size:12px;line-height:1.55;color:var(--ink-3);margin:0;padding-bottom:18px;max-width:none}
+
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.68,.24,1),transform .7s cubic-bezier(.22,.68,.24,1)}
 .reveal.in{opacity:1;transform:none}
@@ -264,6 +294,7 @@ p:last-child{margin-bottom:0}
       Auricwave Valley
     </a>
     <nav class="nav-links" aria-label="Sections">
+      <a href="#apps">Apps</a>
       <a href="#build">What we build</a>
       <a href="#about">About</a>
       <a href="#how">How we work</a>
@@ -281,7 +312,7 @@ p:last-child{margin-bottom:0}
       <h1>Apps for the small parts of the day.</h1>
       <p class="lead">Auricwave Valley builds consumer software — a family of small, focused apps you open without thinking, use for ninety seconds, and close knowing the thing is handled.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#build">See what we build</a>
+        <a class="btn btn-primary" href="#apps">See our apps</a>
         <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
     </div>
@@ -292,6 +323,73 @@ p:last-child{margin-bottom:0}
         <path class="wave-echo" d="M0 131 C90 131 130 131 170 131 C210 131 220 85 260 85 C300 85 310 169 350 169 C390 169 400 107 445 107 C490 107 500 149 545 149 C600 149 620 207 720 217 C820 207 840 149 895 149 C940 149 950 107 995 107 C1040 107 1050 169 1090 169 C1130 169 1140 85 1180 85 C1220 85 1230 131 1270 131 C1330 131 1390 131 1440 131"/>
         <path class="wave w1" d="M0 120 C90 120 130 120 170 120 C210 120 220 74 260 74 C300 74 310 158 350 158 C390 158 400 96 445 96 C490 96 500 138 545 138 C600 138 620 196 720 206 C820 196 840 138 895 138 C940 138 950 96 995 96 C1040 96 1050 158 1090 158 C1130 158 1140 74 1180 74 C1220 74 1230 120 1270 120 C1330 120 1390 120 1440 120"/>
       </svg>
+    </div>
+  </section>
+
+  <!-- APPS -->
+  <section class="section apps" id="apps">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Our apps</p>
+        <h2>Out now on the App Store.</h2>
+        <p class="lead">The family so far. Each one does a single job properly, and stays out of your way.</p>
+      </div>
+
+      <article class="app-feature reveal">
+        <div class="app-copy">
+          <div class="app-id">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fc/9a/dd/fc9add76-bdd7-e6d0-b0dc-300072c4599c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/256x256bb.jpg" alt="Car Expense Logbook app icon" width="72" height="72">
+            <div>
+              <p class="tag">Money and admin</p>
+              <h3>Car Expense Logbook</h3>
+            </div>
+          </div>
+          <p class="app-lead">Income, trips and car expenses in one logbook for iPhone and iPad. Built for delivery drivers, rideshare drivers and sole traders.</p>
+          <ul class="app-points">
+            <li>Odometer-based trip logbook with purpose and distance</li>
+            <li>Income and expense charts by week, month or year</li>
+            <li>PDF and CSV export for your accountant</li>
+          </ul>
+          <div class="app-actions">
+            <a class="btn btn-light" href="/apps/car-expense-logbook/">Learn more</a>
+            <a class="badge" href="https://apps.apple.com/app/car-expense-logbook/id6801534786" rel="noopener" aria-label="Download Car Expense Logbook on the App Store">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+          </div>
+        </div>
+        <div class="app-shots" aria-hidden="true">
+          <img src="apps/car-expense-logbook/images/iphone-logbook-list.webp" alt="" loading="lazy">
+          <img src="apps/car-expense-logbook/images/iphone-expenses-chart.webp" alt="" loading="lazy">
+        </div>
+      </article>
+      <article class="app-feature flip reveal">
+        <div class="app-copy">
+          <div class="app-id">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ca/19/cc/ca19cc9d-f84f-a404-767c-3e17c8fd1cc4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/256x256bb.jpg" alt="Notelio app icon" width="72" height="72">
+            <div>
+              <p class="tag">Everyday organisation</p>
+              <h3>Notelio</h3>
+            </div>
+          </div>
+          <p class="app-lead">Your calendar, daily agenda and notes together on iPhone and iPad. See your day, keep your notes, and look ahead to the month.</p>
+          <ul class="app-points">
+            <li>Daily agenda split into All Day, Timed and Night</li>
+            <li>Month calendar with activity indicators</li>
+            <li>Daily notes with your choice of journal font</li>
+          </ul>
+          <div class="app-actions">
+            <a class="btn btn-light" href="/apps/notelio/">Learn more</a>
+            <a class="badge" href="https://apps.apple.com/app/notelio/id6801750370" rel="noopener" aria-label="Download Notelio on the App Store">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+          </div>
+        </div>
+        <div class="app-shots" aria-hidden="true">
+          <img src="apps/notelio/images/iphone-today-light.webp" alt="" loading="lazy">
+          <img src="apps/notelio/images/iphone-calendar-dark.webp" alt="" loading="lazy">
+        </div>
+      </article>
+      <p class="apps-more reveal">More apps are on the way.</p>
     </div>
   </section>
 
@@ -401,6 +499,7 @@ p:last-child{margin-bottom:0}
         Auricwave Valley
       </span>
     </div>
+    <p class="footer-credit">Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store and iCloud are service marks of Apple Inc., registered in the U.S. and other countries.</p>
     <div class="footer-bottom">
       <span class="footer-copy">Copyright &copy; <span id="yr">2026</span> Auricwave Valley. All rights reserved.</span>
       <nav class="footer-legal" aria-label="Legal">

@@ -7,6 +7,8 @@ Static website for Auricwave Valley, hosted free on GitHub Pages with DNS at Clo
 | File | What it's for |
 |---|---|
 | `index.html` | The whole website — HTML, CSS and JS in one file. Edit this to change content. |
+| `apps/car-expense-logbook/index.html` | The Car Expense Logbook product page, at `auricwavevalley.com/apps/car-expense-logbook/`. Self-contained like `index.html`. Screenshots, the app icon and the App Store badge load from Apple's servers. |
+| `apps/notelio/index.html` | The Notelio product page, at `auricwavevalley.com/apps/notelio/`. Same layout and styles as the Car Expense Logbook page. |
 | `404.html` | Shown when someone hits a URL that doesn't exist. |
 | `privacy.html` | The privacy policy, at `auricwavevalley.com/privacy.html`. Linked from the footer of every page. |
 | `terms.html` | The Terms of Use, at `auricwavevalley.com/terms.html`. Linked from the footer of every page. |
