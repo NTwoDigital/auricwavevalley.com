@@ -10,8 +10,8 @@ Static website for Auricwave Valley, hosted free on GitHub Pages with DNS at Clo
 | `apps/car-expense-logbook/index.html` | The Car Expense Logbook product page, at `auricwavevalley.com/apps/car-expense-logbook/`. Self-contained like `index.html`. Screenshots, the app icon and the App Store badge load from Apple's servers. |
 | `apps/notelio/index.html` | The Notelio product page, at `auricwavevalley.com/apps/notelio/`. Same layout and styles as the Car Expense Logbook page. |
 | `404.html` | Shown when someone hits a URL that doesn't exist. |
-| `privacy.html` | The privacy policy, at `auricwavevalley.com/privacy.html`. Linked from the footer of every page. |
-| `terms.html` | The Terms of Use, at `auricwavevalley.com/terms.html`. Linked from the footer of every page. |
+| `privacy.html` | The privacy policy, at `auricwavevalley.com/privacy` (GitHub Pages serves `privacy.html` there without the extension). Linked from the footer of every page. |
+| `terms.html` | The Terms of Use, at `auricwavevalley.com/terms`. Linked from the footer of every page. |
 | `favicon.svg` | Browser tab icon — the wave mark in gold on near-black. |
 | `logo-mark.svg` | The three-wave mark as scalable vector. Used inline in the header and footer. |
 | `logo-mark.png` | Your original raster mark. |

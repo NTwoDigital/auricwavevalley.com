@@ -3,6 +3,6 @@
   <url><loc>https://auricwavevalley.com/</loc><priority>1.0</priority></url>
   <url><loc>https://auricwavevalley.com/apps/car-expense-logbook/</loc><priority>0.9</priority></url>
   <url><loc>https://auricwavevalley.com/apps/notelio/</loc><priority>0.9</priority></url>
-  <url><loc>https://auricwavevalley.com/privacy.html</loc><priority>0.4</priority></url>
-  <url><loc>https://auricwavevalley.com/terms.html</loc><priority>0.4</priority></url>
+  <url><loc>https://auricwavevalley.com/privacy</loc><priority>0.4</priority></url>
+  <url><loc>https://auricwavevalley.com/terms</loc><priority>0.4</priority></url>
 </urlset>
